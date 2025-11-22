@@ -1,16 +1,16 @@
-TDR 1: Choosing Firebase Firestore as the Database
 
-# Forces
-We required a cloud-based database that can provide real-time updates, document structure flexibility, low-operating cost and simple integration with a serverless backend. The team expertise and the project schedule also demanded low-maintenance utilization of servers with no administration of servers.
+# TDR 1: Choosing Firebase Firestore as the Database 
+## Forces
+We needed a database that was hosted in the cloud, scalable, and could synchronize in real time, low-maintenance, and supported powerful client SDKs. It was also required to be seamlessly integrated with a serverless backend.
 
-# Decision
+## Decision
 We will use Firebase Firestore as the primary database for the system.
 
-# Rationale
-Firestore has auto-scaling, robust client SDK, easy security rules, and flexible NoSQL document structures. It eliminates maintenance and set up of database server, making the development less complex. SQL databases were dismissed due to the need to administer schema and extra hosting power which does not fit the time and constraint of the project and the resources of the backend mechanisms.
+## Rationale
+Firestore has built-in scaling, customizable NoSQL documents, and easy security policies. SQL databases were eliminated as they are more expensive to set up, require strict schema control, and slow development in this project.
 
-# Status
+## Status
 Accepted
 
-# Consequences
-Firestore offers quick development and real time synchronization but it has to be carefully designed with collections and subcollections in order to avoid expensive reads. Complex relational queries may also require denormalization.
+## Consequences
+It is now possible to develop faster and update in real-time, though one has to be careful about the design of collections to prevent read/write wastage.
